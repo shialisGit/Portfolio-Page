@@ -1,7 +1,3 @@
-Sure! Here is a README for the repository:
-
----
-
 # Portfolio Page
 
 This is a personal portfolio page project. The project is mainly written in **JavaScript**, **CSS**, and **TypeScript**.
