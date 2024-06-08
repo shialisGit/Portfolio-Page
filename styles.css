@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 140%;
@@ -23,6 +31,22 @@ header {
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+header, footer {
+    flex-shrink: 0;
+}
+
+.section {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
 }
 
 .logo {
@@ -282,7 +306,11 @@ h2 {
 .nav-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+.section {
+    margin-bottom: 50px; /* Add extra margin to push content upwards */
 }
 
 .nav-buttons .btn {
@@ -309,6 +337,16 @@ footer {
     padding: 10px 0;
     background-color: rgba(0, 0, 0, 0.8);
     border-top: 2px solid #7300ff;
+}
+
+.project-footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #7300ff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Glitch Effect */
