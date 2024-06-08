@@ -61,6 +61,10 @@ header {
     position: relative;
 }
 
+.custom-link {
+    color: #00aaff; /* Replace #FF5733 with your desired color code */
+}
+
 .hire-text::after {
     content: '';
     display: inline-block;
