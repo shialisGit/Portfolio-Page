@@ -33,26 +33,6 @@ header {
     margin: 0 auto;
 }
 
-header, footer {
-    flex-shrink: 0;
-}
-
-.section {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.custom-link {
-    color: #33b8ff; /* Replace #FF5733 with your desired color code */
-}
-
-h2 {
-    margin-top: 0;
-}
-
 .logo {
     height: 50px;
 }
@@ -309,7 +289,7 @@ h2 {
 .nav-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .nav-buttons .btn {
