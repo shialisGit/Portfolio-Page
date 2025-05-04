@@ -104,6 +104,10 @@ nav ul li {
     position: relative;
 }
 
+.custom-link {
+    color: #00aaff;
+}
+
 .hire-text::after {
     content: '';
     display: inline-block;
