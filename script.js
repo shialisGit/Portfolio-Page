@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const textElement = document.getElementById('typing-text');
-    const text = 'Available for Hire';
+    const text = 'Available for Freelance Work';
     let index = 0;
 
     function type() {
@@ -63,4 +63,13 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     setTimeout(function() {
         window.location = href;
     }, 300); // Delay to allow the fade out effect to complete
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function() {
+        navUl.classList.toggle('show');
+    });
 });
