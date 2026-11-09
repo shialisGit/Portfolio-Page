@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Occluded Object Recognition | Christos Shiali</title>
+  <meta name="description" content="A First-Class dissertation on object recognition under partial occlusion, combining a synthetic dataset generator with an interactive YOLOv8 evaluation app.">
+  <meta name="theme-color" content="#08090b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var theme = localStorage.getItem("cs-theme");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Christos Shiali home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-name">Christos Shiali</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm header-cv" href="../assets/Christos_Shiali_CV.pdf" download>
+          Download CV
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+          </svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="case-main">
+    <div class="container">
+      <div class="case-top">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+          Selected work
+        </a>
+        <span class="mono">Case study / 01</span>
+      </div>
+
+      <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span> Computer Vision · 2024</p>
+      <h1 class="case-title">Teaching a detector to see what's partially there.</h1>
+      <p class="case-lede">
+        My First-Class dissertation asked a narrow question with an awkward answer: how do you build and evaluate
+        an object-recognition system when occlusion is the default, not the exception?
+      </p>
+
+      <dl class="case-meta">
+        <div>
+          <dt>Year</dt>
+          <dd>2024</dd>
+        </div>
+        <div>
+          <dt>Context</dt>
+          <dd>BSc dissertation · First-Class</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Individual research</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>Python · YOLOv8 · OpenCV · Streamlit</dd>
+        </div>
+      </dl>
+
+      <figure class="case-hero">
+        <img src="../assets/img/work-occlusion.svg" alt="Technical diagram of a detector identifying a partially occluded person, with clear, partial and occluded views" width="1200" height="750">
+      </figure>
+
+      <div class="case-layout">
+        <nav class="case-toc" aria-label="Case study contents">
+          <a href="#overview">01 / Overview</a>
+          <a href="#approach">02 / Approach</a>
+          <a href="#built">03 / What I built</a>
+          <a href="#outcome">04 / Outcome</a>
+        </nav>
+
+        <article class="case-article">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>
+              Most computer-vision benchmarks are built around clear views. A pedestrian is fully visible; a car is
+              not parked behind a van. Real scenes are less cooperative. Occlusion is one of the main reasons a model
+              that looks strong in a notebook can fail in a deployment.
+            </p>
+            <p>
+              Rather than treating occlusion as noise, I treated it as the design constraint. The dissertation
+              combined three pieces: a generator for synthetic occluded scenes, an interactive application for
+              running and inspecting YOLOv8, and an evaluation of how detection and segmentation behave as objects
+              become progressively hidden.
+            </p>
+          </section>
+
+          <section id="approach">
+            <h2>Approach</h2>
+            <h3>01 / Build the data first</h3>
+            <p>
+              Public occlusion datasets are limited. I built a pipeline that extracts objects, removes their
+              backgrounds, and composites them into new scenes with controlled overlap, scale, and position. That
+              made occlusion a variable I could tune rather than an accident I had to find.
+            </p>
+            <h3>02 / Test the detector, not just the demo</h3>
+            <p>
+              I wrapped YOLOv8 in a Streamlit app so I could run detection and segmentation on images and video and
+              inspect the failure cases directly, not just read aggregate scores. Moving from a checkpoint to a
+              visual answer needed to be fast.
+            </p>
+            <h3>03 / Treat evaluation as part of the system</h3>
+            <p>
+              I compared clean and occluded conditions and documented where confidence, boundaries, and masks
+              degraded. The useful output wasn't a single number; it was a map of failure modes.
+            </p>
+            <blockquote class="case-callout">
+              <p>The most important lesson was that data design is model design. Changing what the model sees during training changed what it could learn far more than tweaking a demo.</p>
+            </blockquote>
+          </section>
+
+          <section id="built">
+            <h2>What I built</h2>
+            <ul>
+              <li>A synthetic dataset pipeline for object extraction, background removal, and scene compositing.</li>
+              <li>A Streamlit interface for image and video inference with detection boxes and segmentation masks.</li>
+              <li>Evaluation notes comparing clean and occluded scenes, with a focus on where the model broke down.</li>
+            </ul>
+            <div class="case-links">
+              <a class="btn btn--ghost btn--sm" href="https://github.com/shialis/OccludedDatabase" target="_blank" rel="noopener noreferrer">Dataset generator ↗</a>
+              <a class="btn btn--ghost btn--sm" href="https://github.com/shialis/yoloWeb" target="_blank" rel="noopener noreferrer">YOLOv8 app ↗</a>
+            </div>
+          </section>
+
+          <section id="outcome">
+            <h2>Outcome</h2>
+            <p>
+              The dissertation was awarded a First-Class grade. More importantly, it gave me a working understanding
+              of the gap between benchmark performance and deployment behaviour, and a habit of asking what the
+              training data never showed the model.
+            </p>
+            <p>
+              The dataset generator and the YOLO testing app became the two standalone projects that follow this case
+              study.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <a class="case-next" href="occlusion-dataset.html">
+        <div>
+          <span>Next case study · 02</span>
+          <h2>Occlusion-Aware Dataset Generator</h2>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Christos Shiali</span>
+      <span class="footer-mid">Nicosia · <span data-local-time>--:--</span></span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOLOv8 Detection &amp; Segmentation Studio | Christos Shiali</title>
+  <meta name="description" content="An interactive Streamlit application for testing YOLOv8 object detection and segmentation on images and video.">
+  <meta name="theme-color" content="#08090b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var theme = localStorage.getItem("cs-theme");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Christos Shiali home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-name">Christos Shiali</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm header-cv" href="../assets/Christos_Shiali_CV.pdf" download>
+          Download CV
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+          </svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="case-main">
+    <div class="container">
+      <div class="case-top">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+          Selected work
+        </a>
+        <span class="mono">Case study / 03</span>
+      </div>
+
+      <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span> Model Testing · 2024</p>
+      <h1 class="case-title">A workbench for inspecting model behaviour.</h1>
+      <p class="case-lede">
+        An interactive Streamlit application for running YOLOv8 detection and segmentation on images and video,
+        built to make model failures visible.
+      </p>
+
+      <dl class="case-meta">
+        <div>
+          <dt>Year</dt>
+          <dd>2024</dd>
+        </div>
+        <div>
+          <dt>Context</dt>
+          <dd>Dissertation tooling</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Individual</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>YOLOv8 · Streamlit · OpenCV</dd>
+        </div>
+      </dl>
+
+      <figure class="case-hero">
+        <img src="../assets/img/work-yolo.svg" alt="YOLOv8 web application with detection boxes, segmentation mask and a model control panel" width="1200" height="750">
+      </figure>
+
+      <div class="case-layout">
+        <nav class="case-toc" aria-label="Case study contents">
+          <a href="#overview">01 / Overview</a>
+          <a href="#approach">02 / Approach</a>
+          <a href="#built">03 / What I built</a>
+          <a href="#outcome">04 / Outcome</a>
+        </nav>
+
+        <article class="case-article">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>
+              A score tells you a model passed a test. It doesn't tell you why it missed the object that mattered.
+              I wanted a fast way to move from a model checkpoint to a visual answer.
+            </p>
+            <p>
+              The app was built as part of my dissertation work on occlusion, but it is useful for any YOLOv8 model:
+              upload an image or video, run detection or segmentation, and inspect the result directly.
+            </p>
+          </section>
+
+          <section id="approach">
+            <h2>Approach</h2>
+            <h3>01 / Keep the loop short</h3>
+            <p>
+              The interface is deliberately plain. The goal was not to build a product; it was to remove every step
+              between a question about the model and visual evidence about the model.
+            </p>
+            <h3>02 / Support the two tasks that matter</h3>
+            <p>
+              Detection answers “where is it?” Segmentation answers “which pixels belong to it?” The app supports
+              both, so the same input can be inspected at two levels of detail.
+            </p>
+            <h3>03 / Test on real inputs</h3>
+            <p>
+              Images and video both matter. A model that performs well on a still frame can behave very differently
+              when objects move, blur, and overlap over time.
+            </p>
+          </section>
+
+          <section id="built">
+            <h2>What I built</h2>
+            <ul>
+              <li>A Streamlit interface for image and video input.</li>
+              <li>YOLOv8 detection with bounding boxes and segmentation with masks.</li>
+              <li>Controls for running inference and inspecting the output visually.</li>
+              <li>A testing workflow for comparing accuracy and speed across inputs.</li>
+            </ul>
+            <div class="case-links">
+              <a class="btn btn--ghost btn--sm" href="https://github.com/shialis/yoloWeb" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+            </div>
+          </section>
+
+          <section id="outcome">
+            <h2>Outcome</h2>
+            <p>
+              The app shortened the loop between hypothesis and visual evidence. It made the limits of the detector
+              obvious: small, overlapping, and partially hidden objects were consistently harder, and a good aggregate
+              score could hide a lot of ugly individual cases.
+            </p>
+            <p>
+              That is the value of a testing tool. It turns “the model seems fine” into a concrete observation about
+              when it is not.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <a class="case-next" href="hybrid-images.html">
+        <div>
+          <span>Next case study · 04</span>
+          <h2>Hybrid Images &amp; Convolution</h2>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Christos Shiali</span>
+      <span class="footer-mid">Nicosia · <span data-local-time>--:--</span></span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

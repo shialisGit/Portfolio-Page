@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
+  <title id="title">YOLOv8 detection and segmentation studio</title>
+  <desc id="desc">A dark application interface showing object detection boxes and a segmentation mask over a street scene, with a model control panel.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#1a1f25" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b222a"/>
+      <stop offset="1" stop-color="#12171d"/>
+    </linearGradient>
+    <linearGradient id="mask" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9bd64a" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#9bd64a" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="#0b0d10"/>
+  <rect width="1200" height="750" fill="url(#grid)" opacity=".5"/>
+
+  <!-- viewport -->
+  <g>
+    <rect x="50" y="76" width="716" height="588" rx="14" fill="#0f1318" stroke="#2b333d"/>
+    <rect x="66" y="108" width="684" height="500" rx="8" fill="#131820"/>
+    <text x="66" y="96" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="2">INPUT / STREET_014.JPG</text>
+    <text x="750" y="96" text-anchor="end" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9.5" letter-spacing="2">LIVE</text>
+
+    <!-- scene -->
+    <g>
+      <rect x="66" y="108" width="684" height="500" fill="#131820"/>
+      <rect x="66" y="350" width="684" height="258" fill="url(#road)"/>
+      <path d="M238 608 L322 350 H494 L578 608 Z" fill="#171d24"/>
+      <line x1="418" y1="608" x2="418" y2="350" stroke="#4c5966" stroke-dasharray="14 12" opacity=".5"/>
+
+      <!-- buildings -->
+      <rect x="82" y="196" width="120" height="154" fill="#1a2129" stroke="#2b333d"/>
+      <rect x="104" y="222" width="20" height="26" fill="#26303a"/>
+      <rect x="146" y="222" width="20" height="26" fill="#26303a"/>
+      <rect x="104" y="266" width="20" height="26" fill="#26303a"/>
+      <rect x="146" y="266" width="20" height="26" fill="#26303a"/>
+
+      <rect x="598" y="164" width="136" height="186" fill="#1a2129" stroke="#2b333d"/>
+      <rect x="622" y="192" width="22" height="30" fill="#26303a"/>
+      <rect x="664" y="192" width="22" height="30" fill="#26303a"/>
+      <rect x="706" y="192" width="22" height="30" fill="#26303a"/>
+      <rect x="622" y="246" width="22" height="30" fill="#26303a"/>
+      <rect x="664" y="246" width="22" height="30" fill="#26303a"/>
+
+      <!-- person -->
+      <circle cx="266" cy="392" r="21" fill="#3a4652"/>
+      <path d="M238 444 Q266 420 294 444 L302 520 L278 520 L274 470 L258 470 L254 520 L230 520 Z" fill="#3a4652"/>
+
+      <!-- car with segmentation mask -->
+      <g>
+        <rect x="442" y="438" width="176" height="70" rx="16" fill="#2b353f"/>
+        <path d="M470 438 L498 400 H554 L582 438 Z" fill="#2b353f"/>
+        <rect x="490" y="440" width="54" height="26" rx="4" fill="#1b222a"/>
+        <rect x="556" y="440" width="42" height="26" rx="4" fill="#1b222a"/>
+        <circle cx="478" cy="510" r="20" fill="#0b0d10" stroke="#4c5966"/>
+        <circle cx="584" cy="510" r="20" fill="#0b0d10" stroke="#4c5966"/>
+        <path d="M438 506 L438 560 L610 560 L610 506 L594 492 L454 492 Z" fill="url(#mask)" stroke="#9bd64a" stroke-width="1.2" stroke-dasharray="6 5"/>
+      </g>
+
+      <!-- sign -->
+      <rect x="652" y="382" width="14" height="140" fill="#2b353f"/>
+      <rect x="630" y="356" width="58" height="38" rx="3" fill="#2b353f" stroke="#4c5966"/>
+
+      <!-- detection boxes -->
+      <g stroke="#9bd64a" fill="none">
+        <rect x="226" y="360" width="84" height="166" stroke-width="1.6"/>
+        <path d="M226 378V360H244 M292 360H310V378 M226 508V526H244 M292 526H310V508" stroke-width="3"/>
+        <rect x="434" y="386" width="194" height="130" stroke-width="1.6"/>
+        <path d="M434 404V386H452 M610 386H628V404 M434 498V516H452 M610 516H628V498" stroke-width="3"/>
+        <rect x="626" y="352" width="66" height="46" stroke-width="1.4" stroke-dasharray="5 4"/>
+      </g>
+
+      <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" letter-spacing="1.2">
+        <rect x="226" y="340" width="58" height="18" fill="#9bd64a"/>
+        <text x="233" y="353" fill="#0a0d07" font-weight="700">PERSON</text>
+        <rect x="434" y="366" width="52" height="18" fill="#9bd64a"/>
+        <text x="441" y="379" fill="#0a0d07" font-weight="700">CAR</text>
+        <rect x="626" y="332" width="46" height="18" fill="#202a18" stroke="#4d6a2a"/>
+        <text x="632" y="345" fill="#9bd64a">SIGN</text>
+      </g>
+
+      <line x1="66" y1="330" x2="750" y2="330" stroke="#9bd64a" stroke-width="1" opacity=".28"/>
+      <text x="82" y="326" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="7.5" letter-spacing="1.2">SCAN</text>
+    </g>
+
+    <!-- timeline -->
+    <rect x="66" y="624" width="684" height="24" rx="4" fill="#131820" stroke="#28303a"/>
+    <rect x="66" y="624" width="228" height="24" rx="4" fill="#9bd64a" opacity=".2"/>
+    <line x1="294" y1="624" x2="294" y2="648" stroke="#9bd64a"/>
+    <text x="74" y="640" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="7.5" letter-spacing="1.2">FRAME 014 / VIDEO INPUT</text>
+  </g>
+
+  <!-- control panel -->
+  <g>
+    <rect x="794" y="76" width="356" height="588" rx="14" fill="#0f1318" stroke="#2b333d"/>
+    <text x="820" y="112" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" letter-spacing="2">YOLOv8 / WEB</text>
+    <text x="1124" y="112" text-anchor="end" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1.6">READY</text>
+    <line x1="820" y1="128" x2="1124" y2="128" stroke="#252c34"/>
+
+    <text x="820" y="158" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.5">TASK</text>
+    <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1.2">
+      <rect x="820" y="170" width="140" height="34" rx="5" fill="#202a18" stroke="#4d6a2a"/>
+      <text x="836" y="191" fill="#9bd64a">DETECT ●</text>
+      <rect x="970" y="170" width="154" height="34" rx="5" fill="#131820" stroke="#28303a"/>
+      <text x="986" y="191" fill="#8b9096">SEGMENT</text>
+    </g>
+
+    <text x="820" y="238" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.5">CONFIDENCE</text>
+    <rect x="820" y="250" width="304" height="6" rx="3" fill="#1c232b"/>
+    <rect x="820" y="250" width="206" height="6" rx="3" fill="#9bd64a"/>
+    <circle cx="1026" cy="253" r="8" fill="#9bd64a"/>
+    <text x="820" y="278" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">0.50</text>
+    <text x="1124" y="278" text-anchor="end" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">0.95</text>
+
+    <text x="820" y="316" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.5">OUTPUT</text>
+    <g>
+      <rect x="820" y="328" width="304" height="126" rx="6" fill="#131820" stroke="#28303a"/>
+      <circle cx="870" cy="376" r="13" fill="#3a4652"/>
+      <path d="M852 406 Q870 394 888 406 L894 430 L878 430 L876 414 L864 414 L862 430 L846 430 Z" fill="#3a4652"/>
+      <text x="906" y="368" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" letter-spacing="1.2">PERSON</text>
+      <text x="906" y="386" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">BOX / MASK</text>
+      <line x1="906" y1="398" x2="1108" y2="398" stroke="#28303a"/>
+      <text x="906" y="420" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" letter-spacing="1.2">CAR</text>
+      <text x="906" y="436" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">BOX / MASK</text>
+    </g>
+
+    <g>
+      <rect x="820" y="480" width="304" height="44" rx="5" fill="#1c232b" stroke="#28303a"/>
+      <text x="840" y="507" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" letter-spacing="1.3">BATCH / VIDEO / IMAGE</text>
+      <path d="M1094 496 L1104 502 L1094 508" stroke="#9bd64a" fill="none" stroke-width="1.4"/>
+    </g>
+
+    <rect x="820" y="548" width="304" height="48" rx="24" fill="#9bd64a"/>
+    <text x="972" y="577" text-anchor="middle" fill="#071004" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" font-weight="700" letter-spacing="2">RUN INFERENCE</text>
+    <text x="972" y="628" text-anchor="middle" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.5">DETECTION + SEGMENTATION</text>
+  </g>
+
+  <text x="50" y="710" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2">MODEL EVALUATION / INTERACTIVE WORKBENCH</text>
+  <text x="1150" y="710" text-anchor="end" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2">2024</text>
+</svg>

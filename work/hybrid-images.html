@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hybrid Images &amp; Convolution | Christos Shiali</title>
+  <meta name="description" content="A computer-vision study of convolution, spatial filtering and hybrid images, exploring how perception changes with distance.">
+  <meta name="theme-color" content="#08090b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var theme = localStorage.getItem("cs-theme");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Christos Shiali home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-name">Christos Shiali</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm header-cv" href="../assets/Christos_Shiali_CV.pdf" download>
+          Download CV
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+          </svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="case-main">
+    <div class="container">
+      <div class="case-top">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+          Selected work
+        </a>
+        <span class="mono">Case study / 04</span>
+      </div>
+
+      <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span> Computer Vision · 2023</p>
+      <h1 class="case-title">An image is more than one frequency.</h1>
+      <p class="case-lede">
+        A computer-vision study of convolution, spatial filtering, and hybrid images, and a reminder that
+        perception depends on distance.
+      </p>
+
+      <dl class="case-meta">
+        <div>
+          <dt>Year</dt>
+          <dd>2023</dd>
+        </div>
+        <div>
+          <dt>Context</dt>
+          <dd>Computer Vision coursework</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Individual</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>Python · NumPy · OpenCV</dd>
+        </div>
+      </dl>
+
+      <figure class="case-hero">
+        <img src="../assets/img/work-hybrid.svg" alt="Low-frequency and high-frequency image information combining into a hybrid image" width="1200" height="750">
+      </figure>
+
+      <div class="case-layout">
+        <nav class="case-toc" aria-label="Case study contents">
+          <a href="#overview">01 / Overview</a>
+          <a href="#approach">02 / Approach</a>
+          <a href="#built">03 / What I built</a>
+          <a href="#outcome">04 / Outcome</a>
+        </nav>
+
+        <article class="case-article">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>
+              Hybrid images combine a low-frequency image with the high-frequency detail of another. Up close you see
+              one thing; from across the room, another. The project was a practical way to understand convolution and
+              the information different spatial frequencies carry.
+            </p>
+            <p>
+              It sits at the foundation of computer vision. Before you can reason about a CNN, it helps to know what
+              a filter actually does to an image.
+            </p>
+          </section>
+
+          <section id="approach">
+            <h2>Approach</h2>
+            <h3>01 / Low-pass</h3>
+            <p>
+              Apply a Gaussian blur to keep the broad structure and remove fine detail. What remains is the
+              low-frequency signal: shape, colour, and large-scale contrast.
+            </p>
+            <h3>02 / High-pass</h3>
+            <p>
+              Subtract the low-pass result from the original to isolate edges and texture. What remains is the part
+              of the image that changes quickly across space.
+            </p>
+            <h3>03 / Combine and inspect</h3>
+            <p>
+              Add the two signals together and view the result at different scales. The interesting part is not just
+              the output image; it is how your perception of it changes as the image gets smaller.
+            </p>
+          </section>
+
+          <section id="built">
+            <h2>What I built</h2>
+            <ul>
+              <li>A filtering pipeline for Gaussian blur and high-pass extraction.</li>
+              <li>A hybrid-image generator with adjustable frequency cutoffs.</li>
+              <li>Visual comparisons showing the same image at multiple scales.</li>
+              <li>Notes on how filter size and cutoff affect the final perception.</li>
+            </ul>
+            <div class="case-links">
+              <a class="btn btn--ghost btn--sm" href="https://github.com/shialisGit/Image-Filtering-and-Hybrid-Images" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+            </div>
+          </section>
+
+          <section id="outcome">
+            <h2>Outcome</h2>
+            <p>
+              The project made convolution tactile rather than abstract. It built intuition for why edge and detail
+              information and global structure are processed differently, useful when reasoning about CNNs,
+              detection, and why a model can recognise an object at one resolution but not another.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <a class="case-next" href="gamecraft.html">
+        <div>
+          <span>Next case study · 05</span>
+          <h2>GameCraft</h2>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Christos Shiali</span>
+      <span class="footer-mid">Nicosia · <span data-local-time>--:--</span></span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

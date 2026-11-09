@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Cyberpunk';
+    src: url('fonts/cyberpunk.ttf') format('truetype');
+}
+body {
+    font-family: 'Cyberpunk', 'Courier New', Courier, monospace;
+}

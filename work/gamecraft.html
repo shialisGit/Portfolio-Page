@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameCraft | Christos Shiali</title>
+  <meta name="description" content="A cloud-based community platform for submitting, reviewing and voting on game ideas, built with a React frontend and Node backend.">
+  <meta name="theme-color" content="#08090b">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var theme = localStorage.getItem("cs-theme");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Christos Shiali home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-name">Christos Shiali</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm header-cv" href="../assets/Christos_Shiali_CV.pdf" download>
+          Download CV
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+          </svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="case-main">
+    <div class="container">
+      <div class="case-top">
+        <a class="back-link" href="../index.html#work">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+          Selected work
+        </a>
+        <span class="mono">Case study / 05</span>
+      </div>
+
+      <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span> Cloud Systems · 2023</p>
+      <h1 class="case-title">A community platform for unfinished game ideas.</h1>
+      <p class="case-lede">
+        A cloud-based platform where developers submit game concepts, the community reviews them, and the best ideas
+        rise through voting.
+      </p>
+
+      <dl class="case-meta">
+        <div>
+          <dt>Year</dt>
+          <dd>2023</dd>
+        </div>
+        <div>
+          <dt>Context</dt>
+          <dd>Cloud Application Development</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Team project</dd>
+        </div>
+        <div>
+          <dt>Stack</dt>
+          <dd>React · Node.js · cloud</dd>
+        </div>
+      </dl>
+
+      <figure class="case-hero">
+        <img src="../assets/img/work-gamecraft.svg" alt="GameCraft architecture with a browser client, API layer, cloud services and community voting" width="1200" height="750">
+      </figure>
+
+      <div class="case-layout">
+        <nav class="case-toc" aria-label="Case study contents">
+          <a href="#overview">01 / Overview</a>
+          <a href="#approach">02 / Approach</a>
+          <a href="#built">03 / What I built</a>
+          <a href="#outcome">04 / Outcome</a>
+        </nav>
+
+        <article class="case-article">
+          <section id="overview">
+            <h2>Overview</h2>
+            <p>
+              Game ideas usually die in private notes. GameCraft was built as a shared surface: register, submit a
+              concept, browse what others are building, and vote on what should move forward.
+            </p>
+            <p>
+              The project was a full-stack cloud application, split into a frontend and backend with a clear API
+              between them. The aim was not to build every feature imaginable, but to make the core loop work end to
+              end.
+            </p>
+          </section>
+
+          <section id="approach">
+            <h2>Approach</h2>
+            <h3>01 / Start with the loop</h3>
+            <p>
+              Submit → browse → review → vote. Every technical decision was judged against whether it made that loop
+              clearer or faster. Features that did not serve it were left out.
+            </p>
+            <h3>02 / Split the system deliberately</h3>
+            <p>
+              The frontend and backend were separate applications with a defined API. That forced us to be explicit
+              about data models, authentication, and what each side was responsible for.
+            </p>
+            <h3>03 / Design for the community</h3>
+            <p>
+              The platform is only useful if people can see other ideas and react to them. The interface prioritises
+              browsing and voting over heavy configuration.
+            </p>
+          </section>
+
+          <section id="built">
+            <h2>What I built</h2>
+            <ul>
+              <li>A React frontend for browsing, submitting, and reviewing game ideas.</li>
+              <li>A Node.js backend with API routes for users, ideas, and votes.</li>
+              <li>Registration and authentication flows.</li>
+              <li>Cloud deployment with separate frontend and backend repositories.</li>
+            </ul>
+            <div class="case-links">
+              <a class="btn btn--ghost btn--sm" href="https://github.com/saarujan1/gamecraft-frontend" target="_blank" rel="noopener noreferrer">Frontend ↗</a>
+              <a class="btn btn--ghost btn--sm" href="https://github.com/saarujan1/gamecraft-backend" target="_blank" rel="noopener noreferrer">Backend ↗</a>
+            </div>
+          </section>
+
+          <section id="outcome">
+            <h2>Outcome</h2>
+            <p>
+              The project made one thing clear: most of cloud development is contract and state management, not
+              infrastructure. Ambiguity in a data model becomes a bug in two places at once.
+            </p>
+            <p>
+              Working across frontend and backend also changed how I review systems. I now look for the shape of the
+              data before the shape of the interface.
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <a class="case-next" href="quiplash.html">
+        <div>
+          <span>Next case study · 06</span>
+          <h2>Quiplash Remake</h2>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Christos Shiali</span>
+      <span class="footer-mid">Nicosia · <span data-local-time>--:--</span></span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>

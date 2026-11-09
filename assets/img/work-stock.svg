@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
+  <title id="title">Market plot analysis</title>
+  <desc id="desc">A dark financial chart with candlesticks, a trend line, volume bars and an inspection tooltip.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#1a1f25" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9bd64a" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#9bd64a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="750" fill="#0b0d10"/>
+  <rect width="1200" height="750" fill="url(#grid)" opacity=".5"/>
+
+  <text x="60" y="62" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" letter-spacing="2.2">MARKET / HISTORICAL SERIES</text>
+  <text x="60" y="84" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" letter-spacing="1.5">INTERACTIVE PRICE + VOLUME EXPLORER</text>
+  <text x="1140" y="62" text-anchor="end" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="9" letter-spacing="1.6">D3 / PLOTLY</text>
+  <line x1="60" y1="104" x2="1140" y2="104" stroke="#252c34"/>
+
+  <!-- chart frame -->
+  <rect x="60" y="132" width="1080" height="492" rx="12" fill="#0e1217" stroke="#252c34"/>
+
+  <!-- horizontal grid -->
+  <g stroke="#20272f">
+    <line x1="80" y1="190" x2="1116" y2="190"/>
+    <line x1="80" y1="260" x2="1116" y2="260"/>
+    <line x1="80" y1="330" x2="1116" y2="330"/>
+    <line x1="80" y1="400" x2="1116" y2="400"/>
+    <line x1="80" y1="470" x2="1116" y2="470"/>
+    <line x1="80" y1="540" x2="1116" y2="540"/>
+  </g>
+
+  <!-- area under trend -->
+  <path d="M80 460 L130 440 L180 452 L230 410 L280 424 L330 384 L380 396 L430 350 L480 366 L530 322 L580 338 L630 296 L680 310 L730 268 L780 284 L830 246 L880 260 L930 220 L980 238 L1030 198 L1080 214 L1116 186 L1116 540 L80 540 Z" fill="url(#area)"/>
+
+  <!-- trend line -->
+  <path d="M80 460 L130 440 L180 452 L230 410 L280 424 L330 384 L380 396 L430 350 L480 366 L530 322 L580 338 L630 296 L680 310 L730 268 L780 284 L830 246 L880 260 L930 220 L980 238 L1030 198 L1080 214 L1116 186" fill="none" stroke="#9bd64a" stroke-width="1.6" opacity=".9"/>
+
+  <!-- candles -->
+  <g>
+    <!-- up candles green, down candles clay -->
+    <g stroke="#9bd64a" fill="#9bd64a">
+      <line x1="102" y1="440" x2="102" y2="482"/><rect x="96" y="450" width="12" height="22" rx="1"/>
+      <line x1="152" y1="414" x2="152" y2="462"/><rect x="146" y="426" width="12" height="24" rx="1"/>
+      <line x1="202" y1="432" x2="202" y2="474"/><rect x="196" y="442" width="12" height="20" rx="1"/>
+      <line x1="302" y1="394" x2="302" y2="442"/><rect x="296" y="406" width="12" height="24" rx="1"/>
+      <line x1="402" y1="354" x2="402" y2="408"/><rect x="396" y="366" width="12" height="28" rx="1"/>
+      <line x1="502" y1="338" x2="502" y2="388"/><rect x="496" y="350" width="12" height="26" rx="1"/>
+      <line x1="602" y1="298" x2="602" y2="352"/><rect x="596" y="310" width="12" height="28" rx="1"/>
+      <line x1="702" y1="282" x2="702" y2="334"/><rect x="696" y="294" width="12" height="26" rx="1"/>
+      <line x1="802" y1="250" x2="802" y2="304"/><rect x="796" y="262" width="12" height="28" rx="1"/>
+      <line x1="902" y1="228" x2="902" y2="282"/><rect x="896" y="240" width="12" height="26" rx="1"/>
+      <line x1="1002" y1="208" x2="1002" y2="262"/><rect x="996" y="220" width="12" height="28" rx="1"/>
+      <line x1="1102" y1="180" x2="1102" y2="236"/><rect x="1096" y="192" width="12" height="26" rx="1"/>
+    </g>
+    <g stroke="#d98a6a" fill="#d98a6a" opacity=".85">
+      <line x1="177" y1="438" x2="177" y2="486"/><rect x="171" y="450" width="12" height="24" rx="1"/>
+      <line x1="252" y1="412" x2="252" y2="460"/><rect x="246" y="424" width="12" height="22" rx="1"/>
+      <line x1="352" y1="384" x2="352" y2="436"/><rect x="346" y="396" width="12" height="26" rx="1"/>
+      <line x1="452" y1="360" x2="452" y2="414"/><rect x="446" y="372" width="12" height="26" rx="1"/>
+      <line x1="552" y1="328" x2="552" y2="380"/><rect x="546" y="340" width="12" height="26" rx="1"/>
+      <line x1="652" y1="306" x2="652" y2="358"/><rect x="646" y="318" width="12" height="26" rx="1"/>
+      <line x1="752" y1="276" x2="752" y2="328"/><rect x="746" y="288" width="12" height="26" rx="1"/>
+      <line x1="852" y1="256" x2="852" y2="308"/><rect x="846" y="268" width="12" height="26" rx="1"/>
+      <line x1="952" y1="232" x2="952" y2="286"/><rect x="946" y="244" width="12" height="26" rx="1"/>
+      <line x1="1052" y1="212" x2="1052" y2="264"/><rect x="1046" y="224" width="12" height="26" rx="1"/>
+    </g>
+  </g>
+
+  <!-- volume bars -->
+  <g opacity=".45">
+    <rect x="96" y="560" width="12" height="34" fill="#9bd64a"/>
+    <rect x="146" y="550" width="12" height="44" fill="#9bd64a"/>
+    <rect x="196" y="566" width="12" height="28" fill="#9bd64a"/>
+    <rect x="246" y="554" width="12" height="40" fill="#d98a6a"/>
+    <rect x="296" y="558" width="12" height="36" fill="#9bd64a"/>
+    <rect x="346" y="548" width="12" height="46" fill="#d98a6a"/>
+    <rect x="396" y="562" width="12" height="32" fill="#9bd64a"/>
+    <rect x="446" y="552" width="12" height="42" fill="#d98a6a"/>
+    <rect x="496" y="560" width="12" height="34" fill="#9bd64a"/>
+    <rect x="546" y="550" width="12" height="44" fill="#d98a6a"/>
+    <rect x="596" y="556" width="12" height="38" fill="#9bd64a"/>
+    <rect x="646" y="546" width="12" height="48" fill="#d98a6a"/>
+    <rect x="696" y="558" width="12" height="36" fill="#9bd64a"/>
+    <rect x="746" y="550" width="12" height="44" fill="#d98a6a"/>
+    <rect x="796" y="560" width="12" height="34" fill="#9bd64a"/>
+    <rect x="846" y="552" width="12" height="42" fill="#d98a6a"/>
+    <rect x="896" y="556" width="12" height="38" fill="#9bd64a"/>
+    <rect x="946" y="546" width="12" height="48" fill="#d98a6a"/>
+    <rect x="996" y="558" width="12" height="36" fill="#9bd64a"/>
+    <rect x="1046" y="550" width="12" height="44" fill="#d98a6a"/>
+    <rect x="1096" y="556" width="12" height="38" fill="#9bd64a"/>
+  </g>
+
+  <!-- crosshair + tooltip -->
+  <g>
+    <line x1="830" y1="150" x2="830" y2="540" stroke="#9bd64a" stroke-dasharray="3 5" opacity=".55"/>
+    <line x1="80" y1="246" x2="1116" y2="246" stroke="#9bd64a" stroke-dasharray="3 5" opacity=".35"/>
+    <circle cx="830" cy="246" r="4" fill="#9bd64a"/>
+    <rect x="856" y="156" width="198" height="106" rx="7" fill="#10151b" stroke="#4d6a2a"/>
+    <text x="872" y="180" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.3">INSPECT / T+42</text>
+    <text x="872" y="202" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">OPEN</text>
+    <text x="1038" y="202" text-anchor="end" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8">-</text>
+    <text x="872" y="220" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">HIGH</text>
+    <text x="1038" y="220" text-anchor="end" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8">-</text>
+    <text x="872" y="238" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">LOW</text>
+    <text x="1038" y="238" text-anchor="end" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8">-</text>
+    <text x="872" y="256" fill="#ecebe6" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8" letter-spacing="1.2">CLOSE</text>
+    <text x="1038" y="256" text-anchor="end" fill="#8b9096" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8">-</text>
+  </g>
+
+  <!-- axis labels -->
+  <g fill="#5f666d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="7.5" letter-spacing="1">
+    <text x="1124" y="194">100</text>
+    <text x="1124" y="264">80</text>
+    <text x="1124" y="334">60</text>
+    <text x="1124" y="404">40</text>
+    <text x="1124" y="474">20</text>
+    <text x="96" y="622">JAN</text>
+    <text x="296" y="622">APR</text>
+    <text x="496" y="622">JUL</text>
+    <text x="696" y="622">OCT</text>
+    <text x="896" y="622">JAN</text>
+    <text x="1080" y="622">APR</text>
+  </g>
+
+  <text x="60" y="704" fill="#6f767d" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2">DATA PROCESSING / INTERACTIVE VISUALIZATION</text>
+  <text x="1140" y="704" text-anchor="end" fill="#9bd64a" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" letter-spacing="2">IN PROGRESS</text>
+</svg>
