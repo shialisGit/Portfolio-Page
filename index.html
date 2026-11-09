@@ -1,170 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christos Shiali | AI Engineer & Applied ML</title>
+  <meta name="description" content="Christos Shiali is an AI engineer and MSc Artificial Intelligence candidate working across computer vision, applied machine learning, SQL data work, and enterprise automation.">
+  <meta name="author" content="Christos Shiali">
+  <meta name="theme-color" content="#08090b">
+  <link rel="canonical" href="https://shialisgit.github.io/Portfolio-Page/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Christos Shiali | AI Engineer & Applied ML">
+  <meta property="og:description" content="Computer vision, applied machine learning, SQL data work, and enterprise automation. MSc Artificial Intelligence at the University of Cyprus.">
+  <meta property="og:url" content="https://shialisgit.github.io/Portfolio-Page/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var theme = localStorage.getItem("cs-theme");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (error) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Christos Shiali",
+      "jobTitle": "Analyst / Developer",
+      "email": "chrisshialis@gmail.com",
+      "url": "https://shialisgit.github.io/Portfolio-Page/",
+      "sameAs": [
+        "https://github.com/shialisGit",
+        "https://www.linkedin.com/in/christos-shialis-b21b042a6"
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Cyprus" },
+        { "@type": "CollegeOrUniversity", "name": "University of Southampton" }
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Computer Vision",
+        "Machine Learning",
+        "Object Detection",
+        "Dataset Design",
+        "Process Automation"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nicosia",
+        "addressCountry": "CY"
+      }
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <section id="hero">
-        <div class="container">
-            <h1>Christos Shiali</h1>
-            <p>AI and Software Developement Enthusiast</p>
-            <!--<img src="images/pixel-art.png" alt="Cool Pixel Art" class="pixel-art">-->
-            <a href="#projects" class="btn">View My Work</a>
-            <a href="resume.html" class="btn">Resume</a>
-        </div>
-    </section>
-    
-    <section id="gif-section">
-        <div class="container">
-            <img src="images/chewbacka.gif" alt="Chewbacka GIF" class="full-width-gif">
-            <!-- <img src="images/pixel-night.gif" alt="Pixel Night GIF" class="full-width-gif"> -->
-            <!--<img src="images/futuristic.gif" alt="Futuristic GIF" class="full-width-gif">-->
-            <p class="hire-text" id="typing-text"></p>
-        </div>
-    </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Christos Shiali home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-name">Christos Shiali</span>
+      </a>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Computer Science graduate from the University of Southampton with a passion for artificial intelligence and software development. Equipped with hands-on experience in various programming languages and IT disciplines, I have successfully completed multiple projects showcasing my problem-solving and teamwork skills. Eager to apply my knowledge and creativity to develop innovative solutions in the tech industry.</p>
-        </div>
-    </section>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Portofolio Page</h3>
-                        <a href="projects/projectNo1.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Cloud-based Application</h3>
-                        <a href="projects/projectNo2.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Dataset Generator</h3>
-                        <a href="projects/projectNo3.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Stock Market Plot Generator</h3>
-                        <a href="projects/projectNo4.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Website Testing Object Recognition using YOLOV8</h3>
-                        <a href="projects/projectNo5.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Computer Vision: Convolution and Hybrid Images</h3>
-                        <a href="projects/projectNo6.html" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-details">
-                        <h3>Quiplash Backend and Frontend Game Recreation</h3>
-                        <a href="projects/projectNo7.html" class="btn">Read More</a>
-                    </div>
-                </div>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm header-cv" href="assets/Christos_Shiali_CV.pdf" download>
+          Download CV
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+          </svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow mono"><span class="status-dot" aria-hidden="true"></span> AI Engineer · Applied Research</p>
+            <h1>I build AI systems that hold up <em>outside the lab.</em></h1>
+            <p class="hero-lede">
+              Computer vision, applied machine learning, and data-heavy enterprise automation. I'm currently pursuing
+              an <strong>MSc in Artificial Intelligence</strong> at the University of Cyprus while building production
+              systems and SQL-heavy data work at <strong>Alpha Bank Cyprus</strong>.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#work">
+                Selected work
+                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8"></path>
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="assets/Christos_Shiali_CV.pdf" download>
+                Download CV
+                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+                </svg>
+              </a>
             </div>
-        </div>
-    </section>
-    
+            <dl class="hero-stats">
+              <div>
+                <dt>Education</dt>
+                <dd><strong>2:1 BSc Computer Science</strong>University of Southampton</dd>
+              </div>
+              <div>
+                <dt>Dissertation</dt>
+                <dd><strong>First-Class</strong>Occluded object recognition</dd>
+              </div>
+              <div>
+                <dt>Currently</dt>
+                <dd><strong>MSc Artificial Intelligence</strong>University of Cyprus · 2026-28</dd>
+              </div>
+            </dl>
+          </div>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul class="skills-list">
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>C++</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Artificial Intelligence</h3>
-                    <ul class="skills-list">
-                        <li>Machine Learning</li>
-                        <li>AI Algorithms</li>
-                        <li>Computer Vision</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Software Development</h3>
-                    <ul class="skills-list">
-                        <li>Software Development</li>
-                        <li>App Development</li>
-                        <li>Cloud Application Development</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Other Skills</h3>
-                    <ul class="skills-list">
-                        <li>Cybersecurity</li>
-                        <li>Linux</li>
-                        <li>Microsoft Office</li>
-                    </ul>
-                </div>
+          <div class="hero-panel" data-reveal>
+            <div class="panel-bar">
+              <span class="panel-live"><i aria-hidden="true"></i> Profile / 01</span>
+              <span>Nicosia, CY <span class="panel-time" data-local-time>--:--</span></span>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me via these platforms:</p>
-            <div class="contact-icons">
-                <a href="https://github.com/shialisGit" target="_blank">
-                    <img src="images/github-pixel.gif" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/christos-shialis-b21b042a6" target="_blank">
-                    <img src="images/linkedin-pixel.png" alt="LinkedIn">
-                </a>
-                <a href="mailto:chrisshialis@gmail.com">
-                    <img src="images/email-pixel.png" alt="Email">
-                </a>
+            <div class="panel-board">
+              <div class="panel-card">
+                <div class="panel-card__label">
+                  <span>Currently</span>
+                  <span>Open to AI roles</span>
+                </div>
+                <div class="panel-role">
+                  <strong>MSc Artificial Intelligence</strong>
+                  <em>2026-28</em>
+                  <span>University of Cyprus</span>
+                </div>
+                <div class="panel-role">
+                  <strong>Analyst / Developer</strong>
+                  <em>Now</em>
+                  <span>Alpha Bank Cyprus</span>
+                </div>
+              </div>
+              <div class="panel-focus">
+                <span class="panel-focus__label">Core stack</span>
+                <div class="panel-chips">
+                  <span>SQL</span>
+                  <span>Appian</span>
+                  <span>Power Apps</span>
+                  <span>Python</span>
+                </div>
+                <p>Building applications and systems that remove friction, with data integrity first.</p>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <div class="rail" aria-hidden="true">
+        <div class="rail-track">
+          <div class="rail-group">
+            <span class="rail-item">Computer Vision</span>
+            <span class="rail-item">Applied ML</span>
+            <span class="rail-item">Dataset Design</span>
+            <span class="rail-item">Data &amp; SQL</span>
+            <span class="rail-item">Appian · Power Apps</span>
+            <span class="rail-item">Evaluation &amp; Testing</span>
+            <span class="rail-item">Python · SQL · Linux</span>
+          </div>
+          <div class="rail-group">
+            <span class="rail-item">Computer Vision</span>
+            <span class="rail-item">Applied ML</span>
+            <span class="rail-item">Dataset Design</span>
+            <span class="rail-item">Data &amp; SQL</span>
+            <span class="rail-item">Appian · Power Apps</span>
+            <span class="rail-item">Evaluation &amp; Testing</span>
+            <span class="rail-item">Python · SQL · Linux</span>
+          </div>
+        </div>
+      </div>
     </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Christos Shiali. All rights reserved.</p>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-grid">
+          <p class="section-label mono"><b>01</b><span>Why AI</span></p>
+          <div>
+            <div data-reveal>
+              <p class="about-statement">The hard part isn't using AI. It's making it dependable when the world is messy.</p>
+              <div class="about-copy">
+                <div>
+                  <p>
+                    I've watched AI move from research demos to daily infrastructure. In banking, I see both sides:
+                    where automation removes real friction, and where a fragile model or a poorly designed workflow
+                    creates new risk. Much of my work is SQL-heavy: moving, validating, and reconciling sensitive data
+                    where small mistakes are expensive.
+                  </p>
+                  <p>
+                    That gap between a promising model and a system people can trust is the work I want to do.
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    My route here started with a Computer Science degree at Southampton and a First-Class dissertation
+                    on object recognition under partial occlusion. Since then I've spent two years building enterprise
+                    applications, SQL reporting, and workflow automation with Appian and Power Apps at AstroBank and
+                    Alpha Bank.
+                  </p>
+                  <p>
+                    I'm now studying for an MSc in Artificial Intelligence at the University of Cyprus to go deeper
+                    into the systems behind the tools: how models learn, where they fail, and how to evaluate them honestly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <blockquote class="pullquote" data-reveal>
+              “Most vision systems are evaluated on clean data. I'm more interested in what happens when the object is
+              half-hidden, the scene is noisy, or the process has to run inside a bank.”
+              <cite>Working principle</cite>
+            </blockquote>
+
+            <div class="principles" data-reveal>
+              <div class="principle">
+                <b>01</b>
+                <h3>Build for the edge case</h3>
+                <p>Clean benchmarks are the start, not the evidence. I care about the conditions that break a system.</p>
+              </div>
+              <div class="principle">
+                <b>02</b>
+                <h3>Measure before claiming</h3>
+                <p>Evaluation should be specific, reproducible, and honest about what the system cannot do.</p>
+              </div>
+              <div class="principle">
+                <b>03</b>
+                <h3>Ship inside constraints</h3>
+                <p>Production means latency, legacy systems, compliance, and people. Good engineering respects all four.</p>
+              </div>
+            </div>
+
+            <div class="now-strip" data-reveal>
+              <div class="now-item">
+                <span>Now</span>
+                <strong>MSc Artificial Intelligence</strong>
+                <em>University of Cyprus · 2026-2028</em>
+              </div>
+              <div class="now-item">
+                <span>Now</span>
+                <strong>Analyst / Developer</strong>
+                <em>Alpha Bank Cyprus · 2025-Present</em>
+              </div>
+              <div class="now-item">
+                <span>Focus</span>
+                <strong>Computer vision, data integrity &amp; automation</strong>
+                <em>Applied ML · SQL · Appian · Power Apps</em>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-    <script src="responsive.js"></script>
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-grid">
+          <p class="section-label mono"><b>02</b><span>Selected work</span></p>
+          <div>
+            <div class="work-head" data-reveal>
+              <div class="section-head">
+                <h2>Research and engineering, 2022-2026.</h2>
+                <p>
+                  Selected computer-vision research, full-stack systems, and automation work. Currently at Alpha
+                  Bank, I am part of the AstroBank to Alpha Bank migration, working with sensitive data where
+                  accuracy is critical. Each case study covers the problem, the approach, and what I learned.
+                </p>
+              </div>
+              <div class="filters" role="group" aria-label="Filter projects">
+                <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter" type="button" data-filter="vision" aria-pressed="false">Vision</button>
+                <button class="filter" type="button" data-filter="systems" aria-pressed="false">Systems</button>
+                <button class="filter" type="button" data-filter="product" aria-pressed="false">Product</button>
+              </div>
+            </div>
 
+            <div class="work-grid" data-reveal>
+              <a class="work-card work-card--feature" href="work/occluded-object-recognition.html" data-category="vision">
+                <div class="work-media">
+                  <img src="assets/img/work-occlusion.svg" alt="Technical diagram of a detector identifying a partially occluded person" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>01 / Computer Vision</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">Occluded Object Recognition</h3>
+                  <p class="work-desc">
+                    A First-Class dissertation on detection when the object is partly hidden, including a custom
+                    dataset generator and an interactive YOLOv8 evaluation app.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Streamlit</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="work-card" href="work/occlusion-dataset.html" data-category="vision">
+                <div class="work-media">
+                  <img src="assets/img/work-dataset.svg" alt="Pipeline diagram showing objects being extracted and composited into synthetic scenes" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>02 / Data Design</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">Occlusion-Aware Dataset Generator</h3>
+                  <p class="work-desc">
+                    Synthetic training data for the cases clean datasets miss: objects behind other objects.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Compositing</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="work-card" href="work/yolo-web.html" data-category="vision product">
+                <div class="work-media">
+                  <img src="assets/img/work-yolo.svg" alt="YOLOv8 web application with detection boxes and a segmentation mask" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>03 / Model Testing</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">YOLOv8 Detection &amp; Segmentation Studio</h3>
+                  <p class="work-desc">
+                    An interactive Streamlit workbench for testing detection and segmentation on images and video.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">Streamlit</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="work-card" href="work/hybrid-images.html" data-category="vision">
+                <div class="work-media">
+                  <img src="assets/img/work-hybrid.svg" alt="Low-frequency and high-frequency image information combining into a hybrid image" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>04 / Computer Vision</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">Hybrid Images &amp; Convolution</h3>
+                  <p class="work-desc">
+                    A hands-on study of spatial filtering, frequency-domain perception, and what changes with distance.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">Filtering</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="work-card" href="work/gamecraft.html" data-category="systems product">
+                <div class="work-media">
+                  <img src="assets/img/work-gamecraft.svg" alt="GameCraft cloud architecture with client, API and managed services" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>05 / Cloud Systems</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">GameCraft</h3>
+                  <p class="work-desc">
+                    A cloud-native platform for submitting, reviewing, and voting on community game ideas.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Cloud</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="work-card" href="work/quiplash.html" data-category="systems product">
+                <div class="work-media">
+                  <img src="assets/img/work-quiplash.svg" alt="Quiplash game interface with prompt cards, player answers and a cloud pipeline" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>06 / Real-Time Product</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">Quiplash Remake</h3>
+                  <p class="work-desc">
+                    A real-time multiplayer party game rebuilt across client, API, and Azure services.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">Azure Functions</span>
+                    <span class="tag">Cosmos DB</span>
+                  </div>
+                </div>
+              </a>
+
+              <a class="work-card" href="work/market-visualizer.html" data-category="product">
+                <div class="work-media">
+                  <img src="assets/img/work-stock.svg" alt="Dark financial chart with candlesticks, trend line and volume bars" width="1200" height="750" loading="lazy">
+                </div>
+                <div class="work-body">
+                  <div class="work-top">
+                    <span>07 / Data Product</span>
+                    <span class="work-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17L17 7M9 7h8v8"></path></svg>
+                    </span>
+                  </div>
+                  <h3 class="work-item-title">Market Plot Analysis</h3>
+                  <p class="work-desc">
+                    An interactive explorer for historical market data, built with D3.js and Plotly.
+                  </p>
+                  <div class="work-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">D3.js</span>
+                    <span class="tag">Plotly</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-grid">
+          <p class="section-label mono"><b>03</b><span>Experience</span></p>
+          <div>
+            <div class="section-head" data-reveal>
+              <h2>Shipping inside real constraints.</h2>
+              <p>
+                Enterprise software, SQL data work, and workflow automation in banking. The through-line is making
+                systems work for the people who use them, without compromising the data behind them.
+              </p>
+            </div>
+
+            <div class="timeline" data-reveal>
+              <article class="role">
+                <div class="role-meta">
+                  <span class="role-date">Nov 2025 - Present</span>
+                  <span class="role-now">Current</span>
+                </div>
+                <div class="role-body">
+                  <h3>Analyst / Developer</h3>
+                  <p class="role-company">Alpha Bank Cyprus · Full-time</p>
+                  <ul>
+                    <li>Key role in the AstroBank to Alpha Bank migration, moving and validating sensitive customer data. The work demanded extreme attention to detail because mistakes were not an option.</li>
+                    <li>SQL-heavy work: writing and validating queries, reconciling data across systems, and supporting reporting.</li>
+                    <li>Actively building applications and systems with newer technologies, including Appian and Power Apps, to remove friction across banking operations.</li>
+                    <li>Joined as the newest and youngest member of the team and was trusted with responsibility in a high-stakes migration.</li>
+                  </ul>
+                  <div class="role-tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">Appian</span>
+                    <span class="tag">Power Apps</span>
+                    <span class="tag">Data Migration</span>
+                    <span class="tag">REST APIs</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="role">
+                <div class="role-meta">
+                  <span class="role-date">Aug 2024 - Oct 2025</span>
+                </div>
+                <div class="role-body">
+                  <h3>Analyst / Developer</h3>
+                  <p class="role-company">AstroBank · Full-time</p>
+                  <ul>
+                    <li>Developed and maintained enterprise applications on Appian and Power Apps.</li>
+                    <li>Worked with SQL for data processing, validation, and reporting.</li>
+                    <li>Took on leadership responsibilities in project delivery and cross-team coordination.</li>
+                  </ul>
+                  <div class="role-tags">
+                    <span class="tag">Appian</span>
+                    <span class="tag">Power Apps</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Delivery</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="role">
+                <div class="role-meta">
+                  <span class="role-date">Mar 2024, May 2024</span>
+                </div>
+                <div class="role-body">
+                  <h3>Maintenance Course</h3>
+                  <p class="role-company">Wargaming · Documented</p>
+                  <ul>
+                    <li>Gained hands-on experience in DevOps pipelines, system security, networking, and infrastructure automation.</li>
+                    <li>Strengthened technical problem-solving and collaborative skills.</li>
+                  </ul>
+                  <div class="role-tags">
+                    <span class="tag">Linux</span>
+                    <span class="tag">DevOps</span>
+                    <span class="tag">Networking</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="role">
+                <div class="role-meta">
+                  <span class="role-date">Sep 2022 &amp; Jun 2023</span>
+                </div>
+                <div class="role-body">
+                  <h3>Cyber Security Intern</h3>
+                  <p class="role-company">Deloitte · Documented</p>
+                  <ul>
+                    <li>Supported cybersecurity assessments, incident response, and implementation of security controls.</li>
+                    <li>Worked with cross-functional teams to address security and compliance issues.</li>
+                  </ul>
+                  <div class="role-tags">
+                    <span class="tag">Security</span>
+                    <span class="tag">Incident Response</span>
+                    <span class="tag">Compliance</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="role">
+                <div class="role-meta">
+                  <span class="role-date">Jul 2020, Sep 2021</span>
+                </div>
+                <div class="role-body">
+                  <h3>Infantry Soldier</h3>
+                  <p class="role-company">Cypriot National Guard · Documented</p>
+                  <ul>
+                    <li>Developed discipline, resilience, and strong teamwork skills under demanding conditions.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-grid">
+          <p class="section-label mono"><b>04</b><span>Education</span></p>
+          <div>
+            <div class="section-head" data-reveal>
+              <h2>A technical foundation, still being extended.</h2>
+              <p>
+                Formal training in computer science, with a postgraduate turn toward artificial intelligence and
+                the evaluation of learning systems.
+              </p>
+            </div>
+
+            <div class="edu-grid" data-reveal>
+              <article class="edu-card">
+                <div class="edu-meta">
+                  <span>2026 - 2028 (expected)</span>
+                  <span>Postgraduate</span>
+                </div>
+                <h3>MSc Artificial Intelligence</h3>
+                <p class="edu-school">University of Cyprus</p>
+                <div class="edu-detail">
+                  <p>
+                    Postgraduate study in artificial intelligence, machine learning, and applied research, building
+                    on two years of production engineering in banking.
+                  </p>
+                </div>
+              </article>
+
+              <article class="edu-card">
+                <div class="edu-meta">
+                  <span>2021 - 2024</span>
+                  <span>Upper Second-Class (2:1)</span>
+                </div>
+                <h3>BSc Computer Science</h3>
+                <p class="edu-school">University of Southampton</p>
+                <div class="edu-detail">
+                  <p>
+                    <strong>Dissertation:</strong> App Development for Object Recognition, Addressing Partial
+                    Occlusion, awarded First-Class.
+                  </p>
+                  <p>
+                    Relevant modules: Computer Vision, Cloud Application Development, Foundations of Machine Learning.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="awards" data-reveal>
+              <div class="award">
+                <b>18.33 / 20</b>
+                <span>Cypriot Lyceum Apolytirio</span>
+              </div>
+              <div class="award">
+                <b>A* A*</b>
+                <span>A-Level Mathematics &amp; Further Mathematics</span>
+              </div>
+              <div class="award">
+                <b>6th</b>
+                <span>Nicosia Physics Olympiad</span>
+              </div>
+              <div class="award">
+                <b>LCCI 1-3</b>
+                <span>Merit &amp; Distinction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-grid">
+          <p class="section-label mono"><b>05</b><span>Skills</span></p>
+          <div>
+            <div class="skills-intro" data-reveal>
+              <h2>A stack shaped by what I've had to ship.</h2>
+              <p>
+                I use tools because they shorten the distance to a working system, not because they look good on a
+                list. Below is what I've used in production, research, and independent projects, with SQL and data
+                integrity running through most of the banking work.
+              </p>
+              <span class="skills-note">MSc focus · applied machine learning</span>
+            </div>
+
+            <div class="skills-list" data-reveal>
+            <div class="skill-block">
+              <h3>Data / SQL</h3>
+              <div class="skill-tags">
+                <span>SQL queries</span>
+                <span>Data migration</span>
+                <span>Data validation</span>
+                <span>Reconciliation</span>
+                <span>Reporting</span>
+                <span>Sensitive data handling</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Core / daily</h3>
+              <div class="skill-tags">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Appian</span>
+                <span>Power Apps</span>
+                <span>Linux</span>
+                <span>REST APIs</span>
+                <span>Git &amp; GitHub</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>AI &amp; ML</h3>
+              <div class="skill-tags">
+                <span>Machine learning algorithms</span>
+                <span>Computer vision</span>
+                <span>Object detection</span>
+                <span>Segmentation</span>
+                <span>Dataset design</span>
+                <span>Model evaluation</span>
+                <span>Prompt engineering</span>
+                <span>YOLOv8</span>
+                <span>OpenCV</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Build &amp; ship</h3>
+              <div class="skill-tags">
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>Azure Functions</span>
+                <span>Cosmos DB</span>
+                <span>Streamlit</span>
+                <span>Postman</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Foundations</h3>
+              <div class="skill-tags">
+                <span>Java</span>
+                <span>C++</span>
+                <span>C</span>
+                <span>C#</span>
+                <span>Haskell</span>
+                <span>Assembly</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Security &amp; systems</h3>
+              <div class="skill-tags">
+                <span>Cybersecurity principles</span>
+                <span>Incident response</span>
+                <span>Networking fundamentals</span>
+                <span>Hardware / software troubleshooting</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Languages</h3>
+              <div class="skill-tags">
+                <span>Greek · Native</span>
+                <span>English · Fluent</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-panel" data-reveal>
+          <div class="contact-inner">
+            <p class="contact-kicker mono">06 / Contact</p>
+            <h2>Have a hard problem? <em>I'd like to hear about it.</em></h2>
+            <p class="contact-sub">
+              I'm looking for AI engineering and applied research roles where robust perception, honest evaluation,
+              and real-world constraints matter. My background is SQL-heavy banking delivery, and I'm especially
+              interested in teams working on computer vision, ML systems, and reliable AI products.
+            </p>
+            <div class="contact-actions">
+              <a class="btn btn--primary" href="mailto:chrisshialis@gmail.com">
+                chrisshialis@gmail.com
+                <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8"></path>
+                </svg>
+              </a>
+              <button class="btn btn--ghost" type="button" data-copy="chrisshialis@gmail.com" data-label="Copy email">Copy email</button>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/christos-shialis-b21b042a6" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+              <a class="btn btn--ghost" href="https://github.com/shialisGit" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+            <dl class="contact-meta">
+              <div>
+                <dt>Based in</dt>
+                <dd>Nicosia, Cyprus</dd>
+              </div>
+              <div>
+                <dt>Currently</dt>
+                <dd>MSc AI · Alpha Bank</dd>
+              </div>
+              <div>
+                <dt>CV</dt>
+                <dd><a href="assets/Christos_Shiali_CV.pdf" download>Download PDF</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Christos Shiali</span>
+      <span class="footer-mid">Nicosia · <span data-local-time>--:--</span></span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

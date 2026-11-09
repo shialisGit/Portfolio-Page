@@ -1,186 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christos Shiali's Resume</title>
-    <style>
-        /* Additional styles for the resume */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .container {
-            background-color: #1c1c1c;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            margin: 20px auto;
-            max-width: 800px;
-            line-height: 1.6;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-        h1, h2, h3 {
-            color: #ffffff;
-        }
-        .download-link {
-            color: #ad69ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .download-link:hover {
-            text-decoration: underline;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        h2 {
-            font-size: 2em;
-            border-bottom: 2px solid #ad69ff;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        h3 {
-            font-size: 1.5em;
-        }
-        .btn-download {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .btn-download:hover {
-            background-color: #0056b3;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 40px;
-            margin-bottom: 20px;
-        }
-        p, ul li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Christos Shiali</title>
+  <meta name="description" content="Resume of Christos Shiali: AI engineer, MSc Artificial Intelligence candidate, and analyst/developer at Alpha Bank Cyprus.">
+  <meta name="theme-color" content="#08090b">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      try {
+        var theme = localStorage.getItem("cs-theme");
+        if (theme === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (error) {}
+    })();
+  </script>
 </head>
-<body>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Christos Shiali home">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span class="brand-name">Christos Shiali</span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M20 14.2A8 8 0 0 1 9.8 4 8 8 0 1 0 20 14.2Z"></path>
+          </svg>
+        </button>
+        <a class="btn btn--primary btn--sm header-cv" href="assets/Christos_Shiali_CV.pdf" download>
+          Download CV
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 4v12M7 11l5 5 5-5M5 20h14"></path>
+          </svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+          <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M5 5l14 14M19 5L5 19"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="resume-main">
     <div class="container">
-        <header>
+      <div class="resume-toolbar">
+        <a class="back-link" href="index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+          Back to portfolio
+        </a>
+        <div class="hero-actions" style="margin-top:0">
+          <a class="btn btn--primary btn--sm" href="assets/Christos_Shiali_CV.pdf" download>Download PDF</a>
+          <button class="btn btn--ghost btn--sm" type="button" onclick="window.print()">Print</button>
+        </div>
+      </div>
+
+      <article class="resume-sheet">
+        <header class="resume-head">
+          <div>
             <h1>Christos Shiali</h1>
-            <!-- <a href="Christos_Shiali_CV.pdf" class="download-link" download>Download Resume</a> -->
-        </header>      
-        <section>
-            <h2>Personal Details</h2>
-            <div style="display: flex; justify-content: space-between;">
-                <div>
-                    <p><strong>Birth:</strong> October 29, 2002</p>
-                    <!--<p><strong>Address:</strong> Andrea Agroti 10A, Cyprus</p>-->
-                </div>
-                <div>
-                    <p><strong>Mail:</strong> <a href="mailto:chrisshialis@gmail.com">chrisshialis@gmail.com</a></p>
-                    <!--<p><strong>Phone:</strong> (+357) 99736117, (+44) 7708281401</p>-->
-                </div>
+            <p>AI Engineer · MSc Artificial Intelligence candidate</p>
+          </div>
+          <div class="resume-contact">
+            <a href="mailto:chrisshialis@gmail.com">chrisshialis@gmail.com</a>
+            <a href="https://www.linkedin.com/in/christos-shialis-b21b042a6" target="_blank" rel="noopener noreferrer">linkedin.com/in/christos-shialis</a>
+            <a href="https://github.com/shialisGit" target="_blank" rel="noopener noreferrer">github.com/shialisGit</a>
+            <span>Nicosia, Cyprus</span>
+          </div>
+        </header>
+
+        <section class="resume-section">
+          <h2>Profile</h2>
+          <p style="color:var(--text-soft);font-size:13px;line-height:1.7">
+            Computer Science graduate with a First-Class dissertation in object recognition under partial occlusion,
+            now pursuing an MSc in Artificial Intelligence at the University of Cyprus. Two years of experience
+            building enterprise applications, SQL data work, and workflow automation in banking, with a focus on
+            reliable systems, computer vision, and applied machine learning.
+          </p>
+        </section>
+
+        <section class="resume-section">
+          <h2>Experience</h2>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Analyst / Developer <span>· Alpha Bank Cyprus</span></h3>
+              <time>Nov 2025 - Present</time>
             </div>
-        </section>
-        <section>
-            <h2>Work Experience</h2>
-            <h3>Analyst/Developer – AstroBank (Full-time)</h3>
-            <p>Aug 2024 – Present</p>
             <ul>
-                <li>Developing and maintaining applications on the Appian platform.</li>
-                <li>Enhancing skills in application development, process automation, and system integration.</li>
+              <li>Key role in the AstroBank to Alpha Bank migration, moving and validating sensitive customer data. The work demanded extreme attention to detail because mistakes were not an option.</li>
+              <li>SQL-heavy work: writing and validating queries, reconciling data across systems, and supporting reporting.</li>
+              <li>Actively building applications and systems with newer technologies, including Appian and Power Apps, to remove friction across banking operations.</li>
+              <li>Joined as the newest and youngest member of the team and was trusted with responsibility in a high-stakes migration.</li>
             </ul>
-            <h3>Maintenance Course – Wargaming (Documented)</h3>
-            <p>Mar 2024 – May 2024</p>
-            <ul>
-                <li>Gained practical experience in DevOps and systems engineering, covering areas like security, networking, and automation.</li>
-                <li>Strengthened teamwork and problem-solving skills.</li>
-            </ul>
+          </div>
 
-            <h3>Cyber Security Intern – Deloitte (Documented)</h3>
-            <p>Sep 2022 & Jun 2023</p>
-            <ul>
-                <li>Assisted in cybersecurity analysis, incident response, and implementing security measures.</li>
-                <li>Collaborated with cross-functional teams to address security challenges.</li>
-            </ul>
-
-            <h3>Infantry Soldier – Cypriot National Guard (Documented)</h3>
-            <p>Jul 2020 – Sep 2021</p>
-            <ul>
-                <li>Developed self-discipline, adaptability, and interpersonal skills.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <h3>University of Southampton, Computer Science BSc (Expected Graduation: 2024)</h3>
-            <p>2021–2024</p>
-            <ul>
-                <li><strong>Relevant Modules:</strong> Computer Vision, Cloud Application Development, Foundations of Machine Learning, Dissertation Topic: Object Recognition AI project</li>
-                <li>Throughout my university studies, I have successfully completed multiple complex projects, showcasing my skills in problem-solving, teamwork, and the practical application of theoretical concepts in computer science.</li>
-            </ul>
-            <h3>Pre-University Qualifications and Awards</h3>
-            <p>2015–2020</p>
-            <p>Cypriot Lyceum Apolytirio: 18.33 out of 20, A-Levels: Mathematics (A*), Further Mathematics (A*)</p>
-            <p>Pearson LCCI LEVEL 1,2,3 (Merit and Distinction), IELTS: 7, and 6th place in Nicosia’s Physics Olympiad, ECDL Standard Certificate.</p>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <div style="display: flex;">
-                <div style="flex: 1;">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>Greek (Native)</li>
-                        <li>English (Fluent)</li>
-                    </ul>
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>JavaScript (NodeJS and ReactJS)</li>
-                        <li>Java</li>
-                        <li>C++ / C </li>
-                        <li>Haskell</li>
-                        <li>Assembly</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div style="flex: 1;">
-                    <h3>Other IT Skills</h3>
-                    <ul>
-                        <li>Microsoft Office</li>
-                        <li>Hardware and software skills</li>
-                        <li>Linux</li>
-                        <li>Machine learning algorithms</li>
-                        <li>Cyber security knowledge</li>
-                        <li>Prompt engineering</li>
-                    </ul>
-                </div>
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Analyst / Developer <span>· AstroBank</span></h3>
+              <time>Aug 2024, Oct 2025</time>
             </div>
-        </section>
-        
-        <section>
-            <h2>Extra-curricular activities</h2>
             <ul>
-                <li>Interested in graphics and designing, worked on multiple personal projects.</li>
-                <li>Reading books, visiting museums, philosophy, and traveling abroad.</li>
-                <li>Cultural awareness advocate.</li>
+              <li>Developed and maintained enterprise applications on Appian and Power Apps.</li>
+              <li>Worked with SQL for data processing, validation, and reporting.</li>
+              <li>Took on leadership responsibilities in project delivery and cross-team coordination.</li>
             </ul>
+          </div>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Maintenance Course <span>· Wargaming</span></h3>
+              <time>Mar 2024, May 2024</time>
+            </div>
+            <ul>
+              <li>Gained hands-on experience in DevOps pipelines, system security, networking, and infrastructure automation.</li>
+              <li>Strengthened technical problem-solving and collaborative skills.</li>
+            </ul>
+          </div>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Cyber Security Intern <span>· Deloitte</span></h3>
+              <time>Sep 2022 &amp; Jun 2023</time>
+            </div>
+            <ul>
+              <li>Supported cybersecurity assessments, incident response, and implementation of security controls.</li>
+              <li>Worked with cross-functional teams to address security and compliance issues.</li>
+            </ul>
+          </div>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Infantry Soldier <span>· Cypriot National Guard</span></h3>
+              <time>Jul 2020, Sep 2021</time>
+            </div>
+            <ul>
+              <li>Developed discipline, resilience, and strong teamwork skills under demanding conditions.</li>
+            </ul>
+          </div>
         </section>
+
+        <section class="resume-section">
+          <h2>Education</h2>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>MSc Artificial Intelligence <span>· University of Cyprus</span></h3>
+              <time>2026 - 2028 (expected)</time>
+            </div>
+            <ul>
+              <li>Postgraduate study in artificial intelligence, machine learning, and applied research.</li>
+            </ul>
+          </div>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>BSc Computer Science <span>· University of Southampton</span></h3>
+              <time>2021 - 2024</time>
+            </div>
+            <ul>
+              <li>Upper Second-Class Honours (2:1).</li>
+              <li>Dissertation: App Development for Object Recognition, Addressing Partial Occlusion, First-Class.</li>
+              <li>Relevant modules: Computer Vision, Cloud Application Development, Foundations of Machine Learning.</li>
+            </ul>
+          </div>
+
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Pre-University Qualifications <span>· Cypriot Lyceum</span></h3>
+              <time>2015 - 2020</time>
+            </div>
+            <ul>
+              <li>Apolytirio 18.33/20; A-Level Mathematics (A*) and Further Mathematics (A*).</li>
+              <li>Pearson LCCI Levels 1-3 (Merit and Distinction); 6th place, Nicosia Physics Olympiad; IELTS 7; ECDL Standard.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Skills</h2>
+          <div class="resume-skill-row">
+            <b>Languages</b>
+            <span>Greek (native), English (fluent)</span>
+          </div>
+          <div class="resume-skill-row">
+            <b>Data / SQL</b>
+            <span>SQL queries, data migration, validation, reconciliation, reporting, sensitive data handling</span>
+          </div>
+          <div class="resume-skill-row">
+            <b>Programming</b>
+            <span>Python, Java, C++, C, C#, Haskell, Assembly, SQL, JavaScript</span>
+          </div>
+          <div class="resume-skill-row">
+            <b>AI / ML</b>
+            <span>Machine learning algorithms, computer vision, object detection and segmentation, dataset design, model evaluation, prompt engineering</span>
+          </div>
+          <div class="resume-skill-row">
+            <b>Tools</b>
+            <span>Linux, Appian, Power Apps, Postman, REST APIs, Git/GitHub, Azure Functions, Cosmos DB, Streamlit, React, Node.js</span>
+          </div>
+          <div class="resume-skill-row">
+            <b>Security</b>
+            <span>Cybersecurity principles, incident response, networking fundamentals, hardware/software troubleshooting</span>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <h2>Selected Projects</h2>
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Occluded Object Recognition <span>· First-Class dissertation</span></h3>
+              <time>2024</time>
+            </div>
+            <ul>
+              <li>Built a synthetic occlusion dataset generator and a YOLOv8 testing application in Python and Streamlit.</li>
+              <li>Evaluated detection and segmentation under progressively hidden objects.</li>
+            </ul>
+          </div>
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>GameCraft <span>· Cloud application</span></h3>
+              <time>2023</time>
+            </div>
+            <ul>
+              <li>Full-stack community platform for submitting, reviewing, and voting on game ideas.</li>
+            </ul>
+          </div>
+          <div class="resume-role">
+            <div class="resume-role-head">
+              <h3>Quiplash Remake <span>· Real-time multiplayer</span></h3>
+              <time>2023</time>
+            </div>
+            <ul>
+              <li>Recreated the party game with Node.js, Express, Azure Functions, and Cosmos DB.</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year>2026</span> Christos Shiali</span>
+      <span class="footer-mid">Nicosia · <span data-local-time>--:--</span></span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

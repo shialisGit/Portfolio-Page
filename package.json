@@ -1,0 +1,13 @@
+{
+  "name": "christos-shiali-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal portfolio of Christos Shiali - AI engineering, computer vision, and applied machine learning.",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
