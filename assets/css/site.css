@@ -492,10 +492,10 @@ html[data-theme="light"] .theme-toggle .icon-moon {
 .hero h1 {
   margin-top: 22px;
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 7.2vw, 6.6rem);
+  font-size: clamp(2.8rem, 4.6vw, 4.6rem);
   font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -0.035em;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
@@ -1248,24 +1248,18 @@ html[data-theme="light"] .theme-toggle .icon-moon {
   display: grid;
   gap: 7px;
   margin-top: 16px;
+  padding-left: 18px;
+  list-style: disc;
 }
 
 .role-body li {
-  position: relative;
-  padding-left: 17px;
   color: var(--text-soft);
   font-size: 13.5px;
   line-height: 1.62;
 }
 
-.role-body li::before {
-  content: "";
-  position: absolute;
-  top: 0.7em;
-  left: 0;
-  width: 7px;
-  height: 1px;
-  background: var(--accent);
+.role-body li::marker {
+  color: var(--accent);
 }
 
 .role-tags {
@@ -1835,21 +1829,20 @@ html[data-theme="light"] .theme-toggle .icon-moon {
   display: grid;
   gap: 8px;
   margin-top: 16px;
+  padding-left: 20px;
+  list-style: disc;
 }
 
 .case-article li {
-  position: relative;
-  padding-left: 18px;
+  padding-left: 0;
 }
 
 .case-article li::before {
-  content: "";
-  position: absolute;
-  top: 0.72em;
-  left: 0;
-  width: 8px;
-  height: 1px;
-  background: var(--accent);
+  display: none;
+}
+
+.case-article li::marker {
+  color: var(--accent);
 }
 
 .case-article strong {
@@ -2049,24 +2042,23 @@ html[data-theme="light"] .theme-toggle .icon-moon {
   display: grid;
   gap: 4px;
   margin-top: 8px;
+  padding-left: 18px;
+  list-style: disc;
 }
 
 .resume-role li {
-  position: relative;
-  padding-left: 14px;
+  padding-left: 0;
   color: var(--text-soft);
   font-size: 12.5px;
   line-height: 1.55;
 }
 
 .resume-role li::before {
-  content: "";
-  position: absolute;
-  top: 0.7em;
-  left: 0;
-  width: 6px;
-  height: 1px;
-  background: var(--accent);
+  display: none;
+}
+
+.resume-role li::marker {
+  color: var(--accent);
 }
 
 .resume-skill-row {
@@ -2271,7 +2263,7 @@ html.js [data-reveal][data-delay="3"] {
   }
 
   .hero h1 {
-    font-size: clamp(3.1rem, 14vw, 4.6rem);
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
   }
 
   .hero-stats {
